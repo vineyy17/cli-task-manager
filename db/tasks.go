@@ -78,5 +78,5 @@ func itob(v int) []byte {
 }
 
 func btoi(b []byte) int {
-	return int(binary.BigEndian.Uint16(b))
+	return int(binary.BigEndian.Uint64(b))
 }

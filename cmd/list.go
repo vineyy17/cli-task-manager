@@ -16,7 +16,7 @@ var listCmd = &cobra.Command{
 		tasks, err := db.AllTasks()
 
 		if err != nil {
-			fmt.Println("Something went wrong:", err.Error())
+			fmt.Println("Something went wrong:", err)
 			os.Exit(1)
 		}
 
