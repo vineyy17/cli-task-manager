@@ -27,7 +27,7 @@ func Init(dbPath string) error {
 	})
 }
 
-func createTask(task string) (int, error) {
+func CreateTask(task string) (int, error) {
 	var id int
 	err := db.Update(func(tx *bolt.Tx) error {
 		b := tx.Bucket(taskBucket)
