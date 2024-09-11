@@ -32,12 +32,12 @@ var deleteCmd = &cobra.Command{
 				fmt.Println("Invalid task number:", id)
 				continue
 			}
-			task := tasks[id]
+			task := tasks[id-1]
 			err := db.DeleteTask(task.Key)
 			if err != nil {
 				fmt.Printf("Failed to mark \"%d\" as completed. Error: %s\n", id, err)
 			} else {
-				fmt.Printf("Deleted task with ID \"%d\" - \"%s\".\n", id, task.Value)
+				fmt.Printf("Deleted task with S/N \"%d\" - \"%s\".\n", id, task.Value)
 			}
 		}
 	},
